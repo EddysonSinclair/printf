@@ -5,9 +5,10 @@
  * @args: argument to print
  * Return: number of characters printed
  */
-int print_num(va_list args)
+int print_num(va_list ap)
 {
-	int n = va_arg(args, int);
+	int n = va_arg(ap, int);
+	int m = va_arg(ap, int);
 	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
 
@@ -50,9 +51,9 @@ int print_num(va_list args)
  * Return: number of characters printed
  */
 
-int print_dec(va_list args)
+int print_dec(va_list ap)
 {
-	int n = va_arg(args, int);
+	int n = va_arg(ap, int);
 	int num, last = n % 10, digit;
 	int  i = 1;
 	int exp = 1;
