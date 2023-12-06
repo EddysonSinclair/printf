@@ -8,6 +8,7 @@
 int print_num(va_list args)
 {
 	int n = va_arg(args, int);
+	int m = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
 
