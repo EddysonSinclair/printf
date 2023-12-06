@@ -2,11 +2,11 @@
 
 /**
  * _putchar - function that prints a char
- * @n: char used
+ * @n: integer used
  * Return: zero
  */
 
-int _putchar(char *n)
+int _putchar(int n)
 {
 	return (write(1, &n, 1));
 }

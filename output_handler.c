@@ -12,7 +12,7 @@ int output_handler(const char *specifier, va_list ap)
 	int count;
 
 	count = 0;
-	switch (specifier)
+	switch (*specifier)
 	{
 		case 'c':
 			count += _putchar(va_arg(ap, int));
@@ -43,7 +43,7 @@ int output_handler(const char *specifier, va_list ap)
 		default:
 			count += _putchar('%');
 			count += write(STDOUT_FILENO, &(*specifier), 1);
-			break
+			break;
 	}
 	return (count);
 }

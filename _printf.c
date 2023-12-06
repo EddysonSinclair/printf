@@ -12,13 +12,13 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int count;
 
-	if (format == NULL);
-	return (-1);
+	if (format == NULL)
+		return (-1);
 	
-	va_start ap;
+	va_start(ap, format);
 	count = 0;
 
-	while (format != '\0')
+	while (*format != '\0')
 	{
 		if (*format == '%')
 		{
@@ -29,6 +29,6 @@ int _printf(const char *format, ...)
 			count += _putchar(*format);
 		++format;
 	}
-	va_end ap;
+	va_end(ap);
 	return (count);
 }
