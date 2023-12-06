@@ -21,22 +21,22 @@ int output_handler(const char *specifier, va_list ap)
 			count += printstring(va_arg(ap, char*));
 			break;
 		case 'i':
-			count += print_number(va_arg(ap, int), 10);
+			count += print_num(va_arg(ap, int), 10);
 			break;
 		case 'd':
-			count += print_number(va_arg(ap, int), 10);
+			count += print_num(va_arg(ap, int), 10);
 			break;
 		case 'u':
-			count += print_number(va_arg(ap, int), 10);
+			count += print_num(va_arg(ap, int), 10);
 			break;
 		case 'o':
-			count += print_number(va_arg(ap, int), 8);
+			count += print_num(va_arg(ap, int), 8);
 			break;
 		case 'x':
-			count += print_number(va_arg(ap, int), 16);
+			count += print_num(va_arg(ap, int), 16);
 			break;
 		case 'X':
-			count += print_number(va_arg(ap, int), 16);
+			count += print_num(va_arg(ap, int), 16);
 			break;
 		case '\0':
 			return (-1);
