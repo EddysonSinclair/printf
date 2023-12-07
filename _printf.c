@@ -17,18 +17,19 @@ int _printf(const char *format, ...)
 	
 	va_start(ap, format);
 	count = 0;
-
 	while (*format != '\0')
-	{
-		if (*format == '%')
 		{
-			++format;
-			count += output_handler(format, ap);
+			if (*format == '%')
+			{
+				++format;
+				count += output_handler(format, ap);
+			}
+			else
+			{
+				count += _putchar(*format);
+				++format;
+			}
 		}
-		else
-			count += _putchar(*format);
-		++format;
-	}
 	va_end(ap);
 	return (count);
 }
