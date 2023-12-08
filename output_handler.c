@@ -10,7 +10,7 @@
 int output_handler(const char *specifier, va_list ap)
 {
 	int count,c;
-	char s;
+	char *s;
 
 	count = 0;
 	switch (*specifier)
@@ -23,8 +23,11 @@ int output_handler(const char *specifier, va_list ap)
 			}
 			break;
 		case 's':
-			s = printstring(va_arg(ap, char*));
-			count++;
+			s = va_arg(ap, char*);
+			{
+				printstring(s);
+				count++;
+			}
 			break;
 		case 'i':
 		case 'd':
