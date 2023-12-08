@@ -24,9 +24,7 @@ int output_handler(const char *specifier, va_list ap)
 			break;
 		case 's':
 			s = printstring(va_arg(ap, char*));
-			{
-				count++;
-			}
+			count++;
 			break;
 		case 'i':
 		case 'd':
