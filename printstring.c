@@ -12,6 +12,5 @@ int printstring(const char *str)
 		_putchar(*str);
 		str++;
 	}
-	_putchar('\n');
 	return (0);
 }
