@@ -15,6 +15,10 @@ int output_handler(const char *specifier, va_list ap)
 	count = 0;
 	switch (*specifier)
 	{
+		case '%':
+			_putchar('%');
+			break;
+		
 		case 'c':
 			c = va_arg(ap, int);
 			{
