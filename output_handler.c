@@ -56,8 +56,8 @@ int output_handler(const char *specifier, va_list ap)
 		case '\0':
 			return (-1);
 		default:
-			count += _putchar('%');
-			count += write(STDOUT_FILENO, &(*specifier), 1);
+			 _putchar('%');
+			count ++;
 			break;
 	}
 	return (count);
