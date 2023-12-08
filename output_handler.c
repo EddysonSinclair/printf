@@ -17,12 +17,16 @@ int output_handler(const char *specifier, va_list ap)
 	{
 		case 'c':
 			c = va_arg(ap, int);
-			_putchar(c);
-			count++;
+			{
+				_putchar(c);
+				count++;
+			}
 			break;
 		case 's':
 			s = printstring(va_arg(ap, char*));
-			count++;
+			{
+				count++;
+			}
 			break;
 		case 'i':
 		case 'd':
@@ -60,7 +64,7 @@ int output_handler(const char *specifier, va_list ap)
 		case '\0':
 			return (-1);
 		default:
-			 _putchar('');
+			 _putchar('x');
 			count++;
 			break;
 	}
