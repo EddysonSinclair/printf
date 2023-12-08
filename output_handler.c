@@ -9,16 +9,20 @@
 
 int output_handler(const char *specifier, va_list ap)
 {
-	int count;
+	int count,c;
+	char *s;
 
 	count = 0;
 	switch (*specifier)
 	{
 		case 'c':
-			count += _putchar(va_arg(ap, int));
+			c = va_arg(ap, int);
+			_putchar(c);
+			count++;
 			break;
 		case 's':
-			count += printstring(va_arg(ap, char*));
+			s = printstring(va_arg(ap, char*));
+			count++
 			break;
 		case 'i':
 		case 'd':
@@ -57,7 +61,7 @@ int output_handler(const char *specifier, va_list ap)
 			return (-1);
 		default:
 			 _putchar('%');
-			count ++;
+			count++;
 			break;
 	}
 	return (count);
