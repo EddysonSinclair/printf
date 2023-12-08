@@ -22,7 +22,8 @@ int _printf(const char *format, ...)
 			if (*format == '%')
 			{
 				++format;
-				output_handler(format, ap);
+				if (format != '\0')
+					output_handler(format, ap);
 			}
 			else
 			{
