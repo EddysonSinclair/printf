@@ -22,7 +22,7 @@ int output_handler(const char *specifier, va_list ap)
 			break;
 		case 's':
 			s = printstring(va_arg(ap, char*));
-			count++
+			count++;
 			break;
 		case 'i':
 		case 'd':
@@ -60,7 +60,7 @@ int output_handler(const char *specifier, va_list ap)
 		case '\0':
 			return (-1);
 		default:
-			 _putchar('%');
+			 _putchar('');
 			count++;
 			break;
 	}
