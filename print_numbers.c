@@ -26,7 +26,7 @@ int print_decimal(va_list ap)
 
 	if (n / 10 != 0)
 	{
-		count += print_decimal(ap);
+		count += print_decimal(n/10);
 	}
 
 	count += _putchar(n % 10 + 0);
