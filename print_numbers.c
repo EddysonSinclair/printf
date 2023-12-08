@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * printf_int - prints integer
  * @args: argument to print
@@ -44,50 +43,31 @@ int print_integer(va_list ap)
 	return (i);
 }
 
+
 /**
- * printf_dec - prints decimal
- * @args: argument to print
- * Return: number of characters printed
+ * print_decimal_unsigned - prints unsigned int
+ * @ap: argument pointer
+ * Return: count
  */
-
-int print_decimal(va_list ap)
+int print_decimal_unsigned(va_list ap)
 {
-	int n = va_arg(ap, int);
-	int num, last = n % 10, digit;
-	int  i = 1;
-	int exp = 1;
+	unsigned int num = va_arg(ap, unsigned int);
+	int count = 0;
 
-	n = n / 10;
-	num = n;
-
-	if (last < 0)
+	if (num == 0)
 	{
-		_putchar('-');
-		num = -num;
-		n = -n;
-		last = -last;
-		i++;
+		count += _putchar('0');
+		return (count);
 	}
-	if (num > 0)
-	{
-		while (num / 10 != 0)
-		{
-			exp = exp * 10;
-			num = num / 10;
-		}
-		num = n;
-		while (exp > 0)
-		{
-			digit = num / exp;
-			_putchar(digit + '0');
-			num = num - (digit * exp);
-			exp = exp / 10;
-			i++;
-		}
-	}
-	_putchar(last + '0');
 
-	return (i);
+	if (num / 10 != 0)
+	{
+		count += print_decimal_unsigned(ap);
+	}
+
+	count += _putchar(num % 10 + '0');
+
+	return (count);
 }
 
 /**

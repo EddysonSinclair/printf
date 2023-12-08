@@ -38,7 +38,7 @@ int output_handler(const char *specifier, va_list ap)
 			count += print_integer(ap);
 			break;
 		case 'u':
-			count += print_decimal(ap);
+			count += print_decimal_unsigned(ap);
 			break;
 		case 'b':
 			count += print_binary(ap);
