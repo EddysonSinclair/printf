@@ -10,7 +10,7 @@
 int output_handler(const char *specifier, va_list ap)
 {
 	int count,c;
-	char *s;
+	char s;
 
 	count = 0;
 	switch (*specifier)
