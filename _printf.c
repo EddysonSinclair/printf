@@ -22,13 +22,14 @@ int _printf(const char *format, ...)
 			if (*format == '%')
 			{
 				++format;
-				count += output_handler(format, ap);
+				output_handler(format, ap);
 			}
 			else
 			{
-				count += _putchar(*format);
-				++format;
+				_putchar(*format);
+				count++;
 			}
+			++format;
 		}
 	va_end(ap);
 	return (count);
