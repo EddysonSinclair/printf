@@ -1,38 +1,48 @@
 #include "main.h"
-
 /**
- * print_dec - prints decimal
+ * printf_int - prints integer
  * @args: argument to print
  * Return: number of characters printed
  */
-
-int print_decimal(va_list ap)
+int printf_integer(va_list ap)
 {
 	int n = va_arg(ap, int);
-	int count = 0;
+	int num, last = n % 10, digit, exp = 1;
+	int  i = 1;
 
+	n = n / 10;
+	num = n;
 
-	if (n < 0)
+	if (last < 0)
 	{
-		count += _putchar('-');
+		_putchar('-');
+		num = -num;
 		n = -n;
+		last = -last;
+		i++;
 	}
-
-	if (n == 0)
+	if (num > 0)
 	{
-		count += _putchar('0');
-		return (count);
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
+		num = n;
+		while (exp > 0)
+		{
+			digit = num / exp;
+			_putchar(digit + '0');
+			num = num - (digit * exp);
+			exp = exp / 10;
+			i++;
+		}
 	}
+	_putchar(last + '0');
 
-	if (n / 10 != 0)
-	{
-		count += print_decimal(n/10);
-	}
-
-	count += _putchar(n % 10 + 0);
-
-	return (count);
+	return (i);
 }
+
 
 /**
  * print_decimal_unsigned - prints unsigned int
