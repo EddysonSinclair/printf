@@ -4,7 +4,7 @@
  * @args: argument to print
  * Return: number of characters printed
  */
-int printf_integer(va_list ap)
+int print_integer(va_list ap)
 {
 	int n = va_arg(ap, int);
 	int num, last = n % 10, digit, exp = 1;
