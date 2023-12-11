@@ -20,16 +20,16 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			++format;
+			format++;
 			if (*format != '\0')
 				output_handler(format, ap);
 		}
 		else
 		{
-			_putchar(*format);
+			write(1, format, 1);
 			count++;
 		}
-		++format;
+		format++;
 	}
 	va_end(ap);
 	return (count);

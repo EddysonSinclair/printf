@@ -16,12 +16,12 @@ int output_handler(const char *format, va_list ap)
 	switch (*format)
 	{
 		case 'c':
-			c = (char)va_arg(args, int);
+			c = (char)va_arg(ap, int);
 			_putchar(c);
 			count++;
 			break;
 		case 's':
-			str =  va_arg(args, char *);
+			str =  va_arg(ap, char *);
 			while (*str != '\0')
 			{
 				_putchar(*str);
