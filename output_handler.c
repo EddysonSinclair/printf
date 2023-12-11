@@ -17,24 +17,24 @@ int output_handler(const char *format, va_list ap)
 	{
 		case 'c':
 			c = (char)va_arg(ap, int);
-			_putchar(c);
+			write(1, &c, 1);
 			count++;
 			break;
 		case 's':
 			str =  va_arg(ap, char *);
 			while (*str != '\0')
 			{
-				_putchar(*str);
+				write(1, str, 1);
 				str++;
 				count++;
 			}
 			break;
 		case '%':
-			_putchar('%');
+			write(1, "%", 1);
 			count++;
 			break;
 		default:
 			break;
 	}
-	return (0);
+	return (count);
 }
