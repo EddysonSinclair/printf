@@ -30,7 +30,10 @@ int output_handler(const char *format, va_list ap)
 			}
 			break;
 		case '%':
-			write(1, "%", 1);
+			if (write (1, "%", 1) == -1)
+			{
+				return (-1);
+			}
 			count++;
 			break;
 		default:
