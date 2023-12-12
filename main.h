@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 int _printf(const char *format, ...);
-int output_handler(const char *specifier, va_list ap);
+int output_handler(const char *format, va_list ap);
 int _putchar(int n);
 int print_integer(va_list ap);
 int print_hexadecimal(va_list ap, int uppercase);
