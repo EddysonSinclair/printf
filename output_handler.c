@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
  * output_handler- handles the output
  * @format: conversion specifier
