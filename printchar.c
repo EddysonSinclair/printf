@@ -13,6 +13,5 @@ int printchar(va_list ap)
 
 	_putchar(s);
 
-	va_end(ap);
 	return (1);
 }
