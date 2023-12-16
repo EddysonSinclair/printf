@@ -7,30 +7,38 @@
  * Return: zero
  */
 
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
-	va_list ap;
-	int count;
+	convert_match m[] = {
+		{"%s", printstring}, {"%c", printchar},
+		{"%%", printperct}, {"%i", printinteger}, {"%d", printdec}
+	};
 
+	va_list args;
+	int i = 0, j, len = 0;
+
+	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	va_start(ap, format);
-	count = 0;
-	while (*format != '\0')
+
+Here:
+	while (format[i] != '\0')
 	{
-		if (*format == '%')
+		j = 4;
+		while (j >= 0)
 		{
-			format++;
-			if (*format != '\0')
-				output_handler(format, ap);
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			{
+				len += m[j].f(args);
+				i = i + 2;
+				goto Here;
+			}
+			j--;
 		}
-		else
-		{
-			write(1, format, 1);
-			count++;
-		}
-		format++;
+		_putchar(format[i]);
+		len++;
+		i++;
 	}
-	va_end(ap);
-	return (count);
+	va_end(args);
+	return (len);
 }

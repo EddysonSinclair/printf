@@ -2,16 +2,29 @@
 
 /**
  * printstring - prints string
- * @str: string
- * Return: zero
+ * @ap: string
+ * Return: count
  */
-int printstring(const char *str)
+
+int printstring(va_list ap)
 {
-	while (*str != '\0')
+	char *str;
+	int i, count;
+
+	str = va_arg(ap, char *);
+	if (str == NULL)
 	{
-	
-		_putchar(*str);
-		str++;
+		str = "(null)";
+		count = _strlen(str);
+		for (i = 0; i < count; i++)
+			_putchar(str[i]);
+		return (count);
 	}
-	return (0);
+	else
+	{
+		count = _strlen(str);
+		for (i = 0; i < count; i++)
+			_putchar(str[i]);
+		return (count);
+	}
 }
