@@ -9,7 +9,7 @@ int print_binary(va_list ap)
 	int flags = 0;
 	int cont = 0;
 	int i, a = 1, b;
-	unsigned int nums = va_arg(val, unsigned int);
+	unsigned int nums = va_arg(ap, unsigned int);
 	unsigned int p;
 
 	for (i = 0; i < 32; i++)
