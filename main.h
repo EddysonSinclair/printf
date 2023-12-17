@@ -28,4 +28,5 @@ int printperct(void);
 int _strlenk(const char *s);
 int _strlen(char *s);
 void reverse_string(char *str);
+int print_unsignedint(va_list ap);
 #endif
