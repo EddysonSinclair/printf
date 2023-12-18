@@ -7,7 +7,7 @@
 
 int print_hexa(va_list ap)
 {
-	int a; 
+	int a;
 	int count = 0;
 	int *array;
 	unsigned int num = va_arg(ap, unsigned int);

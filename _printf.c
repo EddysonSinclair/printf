@@ -13,7 +13,7 @@ int _printf(const char * const format, ...)
 		{"%s", printstring}, {"%c", printchar},
 		{"%%", printperct}, {"%i", printinteger}, {"%d", printdec},
 		{"%b", print_binary}, {"%u", print_unsignedint}, {"%o", print_octal},
-		{"%x", print_hexa}, {"%X", print_hexadecimal}, 
+		{"%x", print_hexa}, {"%X", print_hexadecimal}
 
 	};
 
