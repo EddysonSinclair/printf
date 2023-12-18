@@ -18,7 +18,7 @@ int _printf(const char *format, ...);
 int _putchar(int n);
 int printchar(va_list ap);
 int printinteger(va_list args);
-int print_hexadecimal(va_list ap, int uppercase);
+int print_hexadecimal(va_list ap);
 int print_binary(va_list ap);
 int printdec(va_list args);
 int print_octal(va_list ap);
@@ -29,4 +29,5 @@ int _strlenk(const char *s);
 int _strlen(char *s);
 void reverse_string(char *str);
 int print_unsignedint(va_list ap);
+int print_hexa(va_list ap);
 #endif
