@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_ocal - function to convert integers to strings.
+ * print_octal - function to convert integers to strings.
  * @ap: variadic variable.
- * Return: integer
+ * Return: integer.
  */
 int print_octal(va_list ap)
 {
