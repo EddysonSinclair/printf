@@ -6,7 +6,7 @@
  */
 int print_unsignedint(va_list ap)
 {
-        int a = va_arg(ap, int);
+        unsigned int a = va_arg(ap, int);
         int num, last = a % 10, digit, exp = 1;
         int  i = 1;
 
