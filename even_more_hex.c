@@ -19,6 +19,8 @@ int even_more_hex(unsigned long int num)
 	}
 	count++;
 	array = malloc(sizeof(long int) * count);
+	if (array == NULL)
+		return (-1);
 	for (a = 0; a < count; a++)
 	{
 		array[a] = tmp % 16;
