@@ -7,7 +7,7 @@
 int print_ptr(va_list ap)
 {
 	void *p;
-	char *a = "(NULL)";
+	char *a = "(nil)";
 	long int b;
 	int i, c;
 
