@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * even_more_hex- print hexadecimals in capital.
+ * even_more_hex - print hexadecimals in capital.
  * @num: variables.
  * Return: integer.
  */
