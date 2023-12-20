@@ -18,8 +18,8 @@ int print_ptr(va_list ap)
 		for (i = 0; a[i] !=  '\0'; i++)
 		{
 			_putchar(a[i]);
-			return (i);
 		}
+		 return (i);
 
 	}
 	b = (unsigned long int)p;
