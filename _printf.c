@@ -14,6 +14,7 @@ int _printf(const char * const format, ...)
 		{"%%", printperct}, {"%i", printinteger}, {"%d", printdec},
 		{"%b", print_binary}, {"%u", print_unsignedint}, {"%o", print_octal},
 		{"%x", print_hexa}, {"%X", print_hexadecimal}, {"%S", more_strings},
+		{"%p", print_ptr},
 
 	};
 
@@ -27,7 +28,7 @@ int _printf(const char * const format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 10;
+		j = 11;
 		while (j >= 0)
 		{
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])

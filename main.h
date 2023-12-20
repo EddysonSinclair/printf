@@ -32,4 +32,6 @@ int print_unsignedint(va_list ap);
 int print_hexa(va_list ap);
 int more_HEX(unsigned int);
 int more_strings(va_list ap);
+int even_more_hex(unsigned long int);
+int print_ptr(va_list ap);
 #endif
