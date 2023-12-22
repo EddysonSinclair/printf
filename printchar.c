@@ -3,7 +3,7 @@
 /**
  * printchar - prints a character.
  * @ap: arguments.
- * Return: count.
+ * Return: integer.
  */
 int printchar(va_list ap)
 {
@@ -11,9 +11,8 @@ int printchar(va_list ap)
 	int count;
 
 	s = va_arg(ap, int);
-	count = _strlen(s);
 
 	_putchar(s);
 
-	return (count);
+	return (1);
 }
