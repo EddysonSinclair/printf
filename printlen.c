@@ -2,7 +2,7 @@
 /**
  * _strlen - Returns the lenght of a string.
  * @s: Type char pointer.
- * Return: c.
+ * Return: n.
  */
 int _strlen(char *s)
 {
@@ -16,7 +16,7 @@ int _strlen(char *s)
 /**
  * _strlenk - Strlen function but applied for constant char pointer s.
  * @s: Type char pointer.
- * Return: c.
+ * Return: n.
  */
 int _strlenk(const char *s)
 {
