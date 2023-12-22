@@ -5,6 +5,6 @@
  */
 int printperct(void)
 {
-	_putchar('%');
+	_putchar(37);
 	return (1);
 }
