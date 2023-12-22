@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * printperct - prints % sign.
- * Return: 1
+ * Return: 1.
  */
 int printperct(void)
 {
