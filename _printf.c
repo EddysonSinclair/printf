@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - main function.
  * @format: argument format.
