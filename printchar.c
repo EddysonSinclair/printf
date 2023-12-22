@@ -8,7 +8,6 @@
 int printchar(va_list ap)
 {
 	char s;
-	int count;
 
 	s = va_arg(ap, int);
 
