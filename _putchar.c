@@ -7,7 +7,7 @@
  */
 
 
-int _putchar(int n)
+int _putchar(char n)
 {
 	return (write(1, &n, 1));
 }
