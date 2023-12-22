@@ -11,5 +11,5 @@ int printchar(va_list ap)
 
 	s = va_arg(ap, int);
 	_putchar(s);
-	return (1);
+	return (0);
 }

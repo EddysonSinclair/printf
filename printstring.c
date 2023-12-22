@@ -1,9 +1,8 @@
 #include "main.h"
-
 /**
- * printstring - prints string.
- * @ap: string.
- * Return: count.
+ * printstring - prints string
+ * @ap: string
+ * Return: count
  */
 
 int printstring(va_list ap)
