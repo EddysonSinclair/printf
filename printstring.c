@@ -1,21 +1,29 @@
 #include "main.h"
 /**
- * printstring - prints string
- * @ap: string
- * Return: count
+ * printstring - print a string.
+ * @ap: argumen t.
+ * Return: the length of the string.
  */
 
 int printstring(va_list ap)
 {
-	char *str;
-	int i, count;
+	char *s;
+	int i, len;
 
-	str = va_arg(ap, char *);
-	if (str == NULL)
-		str = "(null)";
-	count = _strlen(str);
-
-	for (i = 0; i < count; i++)
-		_putchar(str[i]);
-	return (count);
+	s = va_arg(ap, char *);
+	if (s == NULL)
+	{
+		s = "(null)";
+		len = _strlen(s);
+		for (i = 0; i < len; i++)
+			_putchar(s[i]);
+		return (len);
+	}
+	else
+	{
+		len = _strlen(s);
+		for (i = 0; i < len; i++)
+			_putchar(s[i]);
+		return (len);
+	}
 }
