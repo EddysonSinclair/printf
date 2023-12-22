@@ -15,7 +15,7 @@ typedef struct reference
 } convert_match;
 
 int _printf(const char *format, ...);
-int _putchar(char n);
+int _putchar(char c);
 int printchar(va_list ap);
 int printinteger(va_list args);
 int print_hexadecimal(va_list ap);
