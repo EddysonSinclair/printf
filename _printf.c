@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _printf - main function
- *
- * @format: argument format
- * Return: zero
+ * _printf - main function.
+ * @format: argument format.
+ * Return: zero.
  */
 
 int _printf(const char * const format, ...)

@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _putchar - function that prints a char
- * @n: integer used
- * Return: zero
+ * _putchar - function that prints a char.
+ * @n: integer used.
+ * Return: zero.
  */
 
 
