@@ -1,9 +1,8 @@
 #include "main.h"
-
 /**
  * printchar - prints a character.
  * @ap: arguments.
- * Return: integer.
+ * Return: 1.
  */
 int printchar(va_list ap)
 {
@@ -11,5 +10,5 @@ int printchar(va_list ap)
 
 	s = va_arg(ap, int);
 	_putchar(s);
-	return (0);
+	return (1);
 }
